@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing BEM</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7fb5ff4237.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
   <header>
     <section class="imagen_principal">
       <nav class="nav">
         <h1 class="nav__titulo">Drive Now</h1>
         <div class="menu">
-          <a href="vehiculos" class="nav__item nav__item--hover">Vehículos</a>
-          <a href="servicios-financieros" class="nav__item nav__item--hover">Servicios Financieros</a>
-          <a href="post-venta" class="nav__item nav__item--hover">Post Venta</a>
-          <a href="comprar" class="nav__item nav__item--comprar">Comprar ahora</a>
+          <a href="#vehiculos" class="nav__item nav__item--hover">Vehículos</a>
+          <a href="#cotizacion" class="nav__item nav__item--hover">Cotización</a>
+          <a href="#nosotros" class="nav__item nav__item--hover">Nosotros</a>
+          <a href="#comprar" class="nav__item nav__item--comprar">Comprar ahora</a>
         </div>
       </nav>
       <section class="informacion">
@@ -27,92 +26,125 @@
     </section>
   </header>
   <main>
-    <nav class="marcas">
-      <a href="Ford" class="marcas__item">
-        <img src="imagenes/ford.png" alt="ford" class="marcas__imagen">
-      </a>
-      <a href="Ferrari" class="marcas__item">
-        <img src="imagenes/ferrari.png" alt="ferrari" class="marcas__imagen">
-      </a>
-      <a href="BMW" class="marcas__item">
-        <img src="imagenes/bmw.png" alt="bmw" class="marcas__imagen">
-      </a>
-      <a href="Mercedes" class="marcas__item">
-        <img src="imagenes/mercedes.png" alt="mercedes" class="marcas__imagen">
-      </a>
-    </nav>
     <div class="contenedor">
-      <section class="tarjetas">
+      <h1 class="contenedor__titulo">Marcas Asociadas</h1>
+      <section class="tarjetas" id="vehiculos">
         <div class="tarjeta__item">
-          <h1 class="tarjeta__titulo">Ford</h1>
-          <img src="imagenes/fordc.png" alt="ford" class="tarjeta__img">
-          <p class="tarjeta__informacion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus inventore sint eius in sit, officia blanditiis.</p>
-          <button class="tarjeta__enviar">Más detalles</button>
+          <img src="imagenes/bmw.jpeg" alt="bmw" class="tarjeta__img">
+        </div>
+        <div class="tarjeta__item">
+          <img src="imagenes/ferrari.jpeg" alt="ferrari" class="tarjeta__img">
+        </div>
+        <div class="tarjeta__item">
+          <img src="imagenes/toyota.jpeg" alt="toyota" class="tarjeta__img">
+        </div>
+        <div class="tarjeta__item">
+          <img src="imagenes/bugatti.jpeg" alt="bugatti" class="tarjeta__img">
+        </div>
+        <div class="tarjeta__item">
+          <img src="imagenes/porsche.jpeg" alt="porsche" class="tarjeta__img">
+        </div>
+        <div class="tarjeta__item">
+          <img src="imagenes/Aston.jpeg" alt="aston" class="tarjeta__img">
+        </div>
+        <div class="tarjeta__item">
+          <img src="imagenes/mercedes.jpeg" alt="mercedes" class="tarjeta__img">
+        </div>
+        <div class="tarjeta__item">
+          <img src="imagenes/landerover.jpeg" alt="land rover" class="tarjeta__img">
         </div>
       </section>
-      <form class="formulario">
-        <h1 class="formulario__titulo">
-          ¡Cotiza ahora! Déjanos tus datos y nos pondremos en contacto contigo pronto.
-        </h1>
-        <div class="formulario__campo">
-          <label for="nombre" class="formulario__etiqueta">Nombre</label>
-          <input type="text" id="nombre" name="nombre" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo">
-          <label for="apellido" class="formulario__etiqueta">Apellido</label>
-          <input type="text" id="apellido" name="apellido" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo">
-          <label for="cedula" class="formulario__etiqueta">Cédula</label>
-          <input type="number" id="cedula" name="cedula" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo">
-          <label for="celular" class="formulario__etiqueta">Celular</label>
-          <input type="tel" id="celular" name="celular" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo">
-          <label for="fecha" class="formulario__etiqueta">Fecha estimada de compra</label>
-          <input type="date" id="fecha" name="fecha" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo">
-          <label for="email" class="formulario__etiqueta">E-mail</label>
-          <input type="email" id="email" name="email" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo">
-          <label for="modelos" class="formulario__etiqueta">Modelos</label>
-          <input type="text" id="modelos" name="modelos" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo">
-          <label for="ciudad" class="formulario__etiqueta">Ciudad</label>
-          <input type="text" id="ciudad" name="ciudad" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo">
-          <label for="concesionario" class="formulario__etiqueta">Concesionario</label>
-          <input type="text" id="concesionario" name="concesionario" class="formulario__input">
-        </div>
-
-        <div class="formulario__campo formulario__campo--checkbox">
-          <input type="checkbox" id="terminos" name="terminos" class="formulario__checkbox">
-          <label for="terminos" class="formulario__texto">
-            Aceptas terminos y condiciones
-          </label>
-        </div>
-
-        <div class="formulario__acciones">
-          <button type="submit" class="formulario__boton formulario__boton--hover">Enviar</button>
-        </div>
-      </form>
     </div>
+    <form class="formulario" id="cotizacion">
+      <h1 class="formulario__titulo">
+        ¡Cotiza ahora! Déjanos tus datos y nos pondremos en contacto contigo pronto.
+      </h1>
+      <div class="formulario__contenedor">
+        <div class="formulario__fila">
+          <div class="formulario__campo">
+            <label for="nombre" class="formulario__etiqueta">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="formulario__input" placeholder="Ingresa tu nombre">
+          </div>
+          <div class="formulario__campo">
+            <label for="apellido" class="formulario__etiqueta">Apellido</label>
+            <input type="text" id="apellido" name="apellido" class="formulario__input"
+              placeholder="Ingresa tu apellido">
+          </div>
+          <div class="formulario__campo">
+            <label for="cedula" class="formulario__etiqueta">Cédula</label>
+            <input type="text" id="cedula" name="cedula" class="formulario__input" placeholder="Número de cédula">
+          </div>
+        </div>
+        <div class="formulario__fila">
+          <div class="formulario__campo">
+            <label for="celular" class="formulario__etiqueta">Celular</label>
+            <input type="tel" id="celular" name="celular" class="formulario__input" placeholder="Número de celular">
+          </div>
+          <div class="formulario__campo">
+            <label for="fecha" class="formulario__etiqueta">Fecha estimada de compra</label>
+            <input type="date" id="fecha" name="fecha" class="formulario__input">
+          </div>
+          <div class="formulario__campo">
+            <label for="email" class="formulario__etiqueta">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="formulario__input" placeholder="ejemplo@correo.com">
+          </div>
+        </div>
+        <div class="formulario__fila">
+          <div class="formulario__campo">
+            <label for="modelos" class="formulario__etiqueta">Modelos de interés</label>
+            <input type="text" id="modelos" name="modelos" class="formulario__input"
+              placeholder="Ej: toyota prado, bmw m4, etc.">
+          </div>
+          <div class="formulario__campo">
+            <label for="ciudad" class="formulario__etiqueta">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" class="formulario__input" placeholder="Tu ciudad">
+          </div>
+          <div class="formulario__campo">
+            <label for="concesionario" class="formulario__etiqueta">Concesionario preferido</label>
+            <input type="text" id="concesionario" name="concesionario" class="formulario__input" placeholder="Opcional">
+          </div>
+        </div>
+      </div>
+      <div class="formulario__campo--checkbox">
+        <input type="checkbox" id="terminos" name="terminos" class="formulario__checkbox">
+        <label for="terminos" class="formulario__texto">
+          Aceptas términos y condiciones
+        </label>
+      </div>
+      <div class="formulario__acciones">
+        <button type="submit" class="formulario__boton">Enviar</button>
+      </div>
+    </form>
   </main>
+<footer class="footer" id="nosotros">
+  <div class="footer__container">
+    <div class="footer__section">
+      <h2 class="footer__titulo">Drive Now</h2>
+      <div class="footer__social">
+        <a href="#" class="footer__icon"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#" class="footer__icon"><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href="#" class="footer__icon"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer__section">
+      <h3 class="footer__title">Sobre Nosotros</h3>
+      <ul class="footer__list">
+        <li><a href="#" class="footer__link">Nuestra Historia</a></li>
+        <li><a href="#" class="footer__link">Equipo</a></li>
+        <li><a href="#" class="footer__link">Misión y Visión</a></li>
+        <li><a href="#" class="footer__link">Carreras</a></li>
+      </ul>
+    </div>
+    <div class="footer__section">
+      <h3 class="footer__title">Contacto</h3>
+      <div class="footer__contact-info">
+        <span class="footer__contact-item">info@empresa.com</span>
+        <span class="footer__contact-item">+57 300 123 4567</span>
+        <span class="footer__contact-item">Girón, Santander, Colombia</span>
+      </div>
+    </div>
   </div>
-</body>
+</footer>
 
+</body>
 </html>
