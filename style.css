@@ -417,4 +417,14 @@ body {
   .informacion__titulo{
     display: none;
   }
+  .formulario__contenedor{
+    align-items: center;
+  }
+  .formulario__fila{
+    flex-direction: column;
+  }
+
+  .formulario__input{
+    width: 300px;
+  }
 }
