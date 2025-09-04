@@ -63,6 +63,9 @@ body {
 .nav__item--hover:hover {
   border-bottom: 2px solid var(--bordes);
 }
+.nav_media{
+  display: none;
+}
 .imagen_principal {
   background-image: url(/imagenes/principal.jpg);
   height: 1000px;
@@ -389,5 +392,29 @@ body {
   }
   .footer_section-ultimo{
     margin: 0 auto;
+  }
+}
+
+@media(max-width:600px) {
+  .menu {
+    display: none;
+  }
+  .nav_media {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburguesa {
+    display: block;
+    color: red;
+    font-size: 20px;
+  }
+  .imagen_principal{
+    background: url(imagenes/fondo3.jpeg);
+    background-size: contain;
+    width: 100%;
+  }
+  .informacion__titulo{
+    display: none;
   }
 }
